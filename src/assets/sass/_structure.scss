@@ -1,0 +1,40 @@
+body {
+	padding: 10vw 0;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 940px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	> div {
+		margin: 5px;
+		background: #666;
+		box-sizing: border-box;
+	}
+
+
+	.four-coluns {
+		flex-grow: 4;
+		width: calc(100% - 10px);
+		height: 525px;
+	}
+	.three-coluns {
+		flex-grow: 3;
+		width: calc(75% - 10px);
+		height: 365px;
+	}
+	.two-coluns {
+		flex-grow: 2;
+		width: calc(50% - 10px);
+		height: 365px;
+	}
+	.one-coluns {
+		flex-grow: 1;
+		width: calc(25% - 10px);
+		height: 365px;
+	}
+
+}
