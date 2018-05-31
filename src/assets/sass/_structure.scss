@@ -1,40 +1,65 @@
-body {
-	padding: 10vw 0;
-}
 
 main {
-	margin: 0 auto;
+	margin: 10vw auto;
 	max-width: 940px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	background: red;
 
-	> div {
-		margin: 5px;
+	@media (max-width: 736px) {
+		padding: 20px;
+	}
+
+	.box {
 		background: #666;
 		box-sizing: border-box;
+		margin-bottom: 20px;
+
+		&.four-coluns {
+			flex-grow: 4;
+			width: calc(100% - 10px);
+			min-height: 525px;
+			max-width: 940px;
+		}
+
+		&.three-coluns {
+			flex-grow: 3;
+			width: calc(75% - 10px);
+			min-height: 365px;
+			max-width: 690px;
+		}
+
+		&.two-coluns {
+			flex-grow: 2;
+			width: calc(50% - 10px);
+			max-width: 460px;
+			min-height: 365px;
+		}
+
+		&.one-coluns {
+			flex-grow: 1;
+			width: calc(25% - 10px);
+			max-width: 220px;
+			min-height: 365px;
+		}
+
+
+		@media (max-width: 736px) {
+			&.four-coluns,
+			&.three-coluns,
+			&.two-coluns,
+			&.one-coluns {
+				min-height: 285px;	
+				flex-grow: 4;
+				max-width: none;
+				width: 100%;
+
+			}
+		}
 	}
 
 
-	.four-coluns {
-		flex-grow: 4;
-		width: calc(100% - 10px);
-		height: 525px;
-	}
-	.three-coluns {
-		flex-grow: 3;
-		width: calc(75% - 10px);
-		height: 365px;
-	}
-	.two-coluns {
-		flex-grow: 2;
-		width: calc(50% - 10px);
-		height: 365px;
-	}
-	.one-coluns {
-		flex-grow: 1;
-		width: calc(25% - 10px);
-		height: 365px;
-	}
+	
 
 }
