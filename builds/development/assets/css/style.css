@@ -32,7 +32,7 @@ table {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between; }
-  @media (max-width: 736px) {
+  @media (max-width: 37.5em) {
     .box-container {
       padding: 20px; } }
 
@@ -43,7 +43,7 @@ table {
   justify-content: center;
   align-items: center;
   position: relative; }
-  @media (max-width: 736px) {
+  @media (max-width: 37.5em) {
     .box.box__four-coluns, .box.box__three-coluns, .box.box__two-coluns, .box.box__one-coluns {
       min-height: 285px;
       flex-grow: 4;
@@ -82,7 +82,7 @@ h1 {
   background: url(../images/valtech-logo.svg) no-repeat center;
   height: 50px;
   margin: 15px auto; }
-  @media (max-width: 736px) {
+  @media (max-width: 37.5em) {
     h1 {
       height: 30px; } }
 
@@ -109,7 +109,7 @@ h3 {
   font-weight: 300; }
 
 .box {
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   overflow: hidden;
   background-position: center center;
@@ -120,7 +120,7 @@ h3 {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .box.lazy-background {
-    background-image: url("http://via.placeholder.com/350x150"); }
+    background-image: url("../images/loading.gif"); }
   .box:after {
     content: '';
     background: rgba(0, 0, 0, 0.3);

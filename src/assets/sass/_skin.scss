@@ -8,9 +8,9 @@ h1 {
 	height: 50px;
 	margin: 15px auto;
 
-	@media (max-width: 736px) {
-		height: 30px;
-	}
+	@include breakpoint(mobileonly) {
+  		height: 30px;
+  	}
 }
 
 h2, h3 {
@@ -40,7 +40,7 @@ h3 {
 }
 
 .box {
-	border-radius: 20px;
+	border-radius: 10px;
 	padding: 10px;
 	overflow: hidden;
 	background-position: center center;
@@ -49,7 +49,7 @@ h3 {
 	@include transition(all 0.5s ease);
 	
 	&.lazy-background {
-		background-image: url('http://via.placeholder.com/350x150');
+		background-image: url('../images/loading.gif');
 	}
 
   	&:after {
@@ -62,8 +62,6 @@ h3 {
   		left: 0;
   		z-index: 0;
   	}
-
-
 }
 
 .box__box__content {
