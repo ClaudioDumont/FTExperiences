@@ -47,8 +47,6 @@ gulp.task('sass', function(){
 
 gulp.task('scripts', function(){
 	gulp.src('src/assets/js/**/*.js')
-		.pipe(rename({suffix: '.min'}))
-		.pipe(uglify())
 		.pipe(gulp.dest('builds/development/assets/js'))
 		.pipe(browserSync.reload({
 			stream: true

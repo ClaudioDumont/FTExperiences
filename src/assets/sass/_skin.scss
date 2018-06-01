@@ -1,5 +1,5 @@
 body {
-	font-family: $font-general;
+	font-family: $font-default;
 }	
 
 h1 {
@@ -46,10 +46,15 @@ h3 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@include transition(all 0.5s ease);
+	
+	&.lazy-background {
+		background-image: url('http://via.placeholder.com/350x150');
+	}
 
   	&:after {
   		content: '';
-  		background: rgba(0,0,0,0.2);
+  		background: rgba(0,0,0,0.3);
   		width: 100%;
   		height: 100%;
   		position: absolute;
@@ -57,6 +62,8 @@ h3 {
   		left: 0;
   		z-index: 0;
   	}
+
+
 }
 
 .box__box__content {
@@ -65,29 +72,43 @@ h3 {
 }
 
 .box--lagoa {
-	background-image: url('../images/lagoa.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/lagoa.jpg'); 		
+	}
 }
 
 .box--amsterdam {
-	background-image: url('../images/amsterdam.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/amsterdam.jpg'); 
+	}
 }
 
 .box--barcelona {
-	background-image: url('../images/barcelona.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/barcelona.jpg'); 	
+	}
 }
 
 .box--berlin {
-	background-image: url('../images/berlin.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/berlin.jpg'); 	
+	}
 }
 
 .box--london {
-	background-image: url('../images/london.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/london.jpg'); 	
+	}
 }
 
 .box--paris {
-	background-image: url('../images/paris.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/paris.jpg'); 	
+	}	
 }
 
 .box--venice {
-	background-image: url('../images/venice.jpg'); 	
+	&.lazy-background.visible {
+		background-image: url('../images/venice.jpg'); 	
+	}
 }
