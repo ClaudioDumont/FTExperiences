@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
 	del = require('del'),
+	babel = require('gulp-babel'),
 	runSequence = require('run-sequence'),
 	browserSync = require('browser-sync').create();
 
@@ -19,11 +20,9 @@ gulp.task('browser-sync', function(){
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('src/templates/**/*.pug')
-
 	.pipe(pug({
 		pretty: true
 	}))
-  	
   	.pipe(gulp.dest('builds/development'))
 	.pipe(browserSync.reload({
 		stream: true
@@ -47,6 +46,11 @@ gulp.task('sass', function(){
 
 gulp.task('scripts', function(){
 	gulp.src('src/assets/js/**/*.js')
+		.pipe(rename({suffix: '.min'}))
+		.pipe(babel({
+      		presets: ['env']
+    	}))
+		.pipe(uglify())
 		.pipe(gulp.dest('builds/development/assets/js'))
 		.pipe(browserSync.reload({
 			stream: true
