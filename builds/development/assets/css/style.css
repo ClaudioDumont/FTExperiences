@@ -79,10 +79,12 @@ body {
 
 h1 {
   text-indent: -999em;
-  background: url(../images/valtech-logo.svg) no-repeat 0 0;
-  width: 225px;
+  background: url(../images/valtech-logo.svg) no-repeat center;
   height: 50px;
   margin: 15px auto; }
+  @media (max-width: 736px) {
+    h1 {
+      height: 30px; } }
 
 h2, h3 {
   color: #fff;
@@ -100,9 +102,9 @@ h3 {
 
 .description {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto;
   font-weight: 300; }
 
