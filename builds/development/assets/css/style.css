@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -25,43 +26,124 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-main {
-  margin: 10vw auto;
+.box-container {
+  margin: 5vw auto;
   max-width: 940px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  background: red; }
+  justify-content: space-between; }
   @media (max-width: 736px) {
-    main {
+    .box-container {
       padding: 20px; } }
-  main .box {
-    background: #666;
-    box-sizing: border-box;
-    margin-bottom: 20px; }
-    main .box.four-coluns {
+
+.box {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  @media (max-width: 736px) {
+    .box.box__four-coluns, .box.box__three-coluns, .box.box__two-coluns, .box.box__one-coluns {
+      min-height: 285px;
       flex-grow: 4;
-      width: calc(100% - 10px);
-      min-height: 525px;
-      max-width: 940px; }
-    main .box.three-coluns {
-      flex-grow: 3;
-      width: calc(75% - 10px);
-      min-height: 365px;
-      max-width: 690px; }
-    main .box.two-coluns {
-      flex-grow: 2;
-      width: calc(50% - 10px);
-      max-width: 460px;
-      min-height: 365px; }
-    main .box.one-coluns {
-      flex-grow: 1;
-      width: calc(25% - 10px);
-      max-width: 220px;
-      min-height: 365px; }
-    @media (max-width: 736px) {
-      main .box.four-coluns, main .box.three-coluns, main .box.two-coluns, main .box.one-coluns {
-        min-height: 285px;
-        flex-grow: 4;
-        max-width: none;
-        width: 100%; } }
+      max-width: none;
+      width: 100%; } }
+
+.box__four-coluns {
+  flex-grow: 4;
+  width: calc(100% - 10px);
+  min-height: 525px;
+  max-width: 940px; }
+
+.box__three-coluns {
+  flex-grow: 3;
+  width: calc(75% - 10px);
+  min-height: 365px;
+  max-width: 690px; }
+
+.box__two-coluns {
+  flex-grow: 2;
+  width: calc(50% - 10px);
+  max-width: 460px;
+  min-height: 365px; }
+
+.box__one-coluns {
+  flex-grow: 1;
+  width: calc(25% - 10px);
+  max-width: 220px;
+  min-height: 365px; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+h1 {
+  text-indent: -999em;
+  background: url(../images/valtech-logo.svg) no-repeat 0 0;
+  width: 225px;
+  height: 50px;
+  margin: 15px auto; }
+
+h2, h3 {
+  color: #fff;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 28px;
+  font-weight: 700; }
+
+h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 300; }
+
+.description {
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 300; }
+
+.box {
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .box:after {
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+
+.box__box__content {
+  text-align: center;
+  z-index: 1; }
+
+.box--lagoa {
+  background-image: url("../images/lagoa.jpg"); }
+
+.box--amsterdam {
+  background-image: url("../images/amsterdam.jpg"); }
+
+.box--barcelona {
+  background-image: url("../images/barcelona.jpg"); }
+
+.box--berlin {
+  background-image: url("../images/berlin.jpg"); }
+
+.box--london {
+  background-image: url("../images/london.jpg"); }
+
+.box--paris {
+  background-image: url("../images/paris.jpg"); }
+
+.box--venice {
+  background-image: url("../images/venice.jpg"); }
