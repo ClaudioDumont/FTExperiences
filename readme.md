@@ -1,6 +1,6 @@
 # FTExperiencies
 
-Holiday fun =], building components using gulp build system, display: flex, SaSS (with BEM), lazy loading in background images etc... 
+Holiday fun =], building components using gulp build system, display: flex, SaSS (with BEM), lazy loading in background images, fractal etc... 
 
 ## Global requirements
 The following requirements have to be installed on your system by you. Further requirements are installed with tools provided and are described in the **Running Project** section.
