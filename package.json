@@ -1,7 +1,7 @@
 {
-  "name": "desafiovaltech_",
+  "name": "FTExperiences",
   "version": "1.0.0",
-  "description": "Front-end developer test for valtech_",
+  "description": "Front-end experiences",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
