@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
+	plumber = require('gulp-plumber'),
 	del = require('del'),
 	babel = require('gulp-babel'),
 	runSequence = require('run-sequence'),
@@ -37,7 +38,9 @@ gulp.task('images', function(){
 
 gulp.task('sass', function(){
 	return gulp.src('src/assets/sass/**/*.scss')
+	.pipe(plumber())
 	.pipe(sass())
+	.pipe(plumber.stop())
 	.pipe(gulp.dest('builds/development/assets/css'))
 	.pipe(browserSync.reload({
 		stream: true
@@ -50,7 +53,9 @@ gulp.task('scripts', function(){
 		.pipe(babel({
       		presets: ['env']
     	}))
+    	.pipe(plumber())
 		.pipe(uglify())
+		.pipe(plumber.stop())
 		.pipe(gulp.dest('builds/development/assets/js'))
 		.pipe(browserSync.reload({
 			stream: true

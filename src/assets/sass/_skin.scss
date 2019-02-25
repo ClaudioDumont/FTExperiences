@@ -3,8 +3,6 @@ body {
 }	
 
 h1 {
-	text-indent: -999em;
-	background: url(../images/valtech-logo.svg) no-repeat center;
 	height: 50px;
 	margin: 15px auto;
 
@@ -46,6 +44,7 @@ h3 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: hidden;
 	@include transition(all 0.5s ease);
 	
 	&.lazy-background {
@@ -62,16 +61,45 @@ h3 {
   		left: 0;
   		z-index: 0;
   	}
+
+  	&:hover {
+  		.box__box__content {
+  			left: -100%;
+  		}
+  	}
+}
+
+.container_information {
+	position: absolute;
+	left: 100%;
 }
 
 .box__box__content {
 	text-align: center;
 	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@include transition(all 0.5s ease);
+
+
 }
 
 .box--lagoa {
 	&.lazy-background.visible {
 		background-image: url('../images/lagoa.jpg'); 		
+	}
+}
+
+.box--istambul {
+	&.lazy-background.visible {
+		background-image: url('../images/istambul.jpg'); 		
 	}
 }
 
